@@ -1,0 +1,18 @@
+<div *ngIf = "leagueFixtures" class ="container">
+	<div class="row">
+		<div *ngFor = "let match of leagueFixtures.fixtures" class="col-md-5 col-md-offset-1">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h2 class="panel-title text-center">{{ match.homeTeamName}}    vs    {{match.awayTeamName}}</h2>
+				</div>
+				<div class="panel-body">
+					<h4 class="text-center"> {{match.result.goalsHomeTeam}} - {{match.result.goalsAwayTeam}}</h4>
+					<p class="text-center">Date:{{ match.date}}</p>
+					<p class="text-center">Status: {{match.status}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+

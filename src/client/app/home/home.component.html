@@ -1,0 +1,25 @@
+<div class="container demo">
+	<div class="row">
+		<div class="col-md-6">
+			<div *ngIf= "news">
+				<div *ngFor= "let post of news.posts">
+					<h3>
+						{{post.title}}
+					</h3>
+					<div class="panel-heading">
+						<img class= "img" src="{{ post.thread.main_image }}" alt="" height="300" width="300">
+					</div>
+					<button (click)= "onClick(post)" type="button" class="btn btn-primary btn-md">
+					 See More
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<!-- <p>
+				{{  post.text }}
+			</p> -->
+		</div>
+	</div>
+</div>
+

@@ -1,0 +1,19 @@
+<div class="container">
+	<div class="row">
+	<div *ngFor = "let comp of compititions" class= "col-md-5 col-md-offset-1">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title text-center"> {{comp.caption}}</h3>
+					<p class="text-center">League : {{ comp.league }} </p>
+				</div>
+				<div class="panel-body">
+					<div class="btn-group btn-group-justified">
+						<a (click) = "goCompDetail(comp.id)" class="btn btn-default">Teams</a>
+						<a (click) = "goToFixtures(comp.id)" class="btn btn-default">Fixtures</a>
+						<a (click) = "goToStandings(comp.id)" class="btn btn-default">Standings</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

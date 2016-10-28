@@ -1,0 +1,18 @@
+<div class="container">
+	<a href="">Back</a>
+	<div *ngIf="detailedNews"  class="row">
+		<div *ngFor = "let news of detailedNews">
+			<div class="col-md-7">
+				<h3>{{news.title}}</h3>
+				<p>author: {{ news.author}}</p>
+				<p>Published: {{news.crawled}}</p>
+				<h5>{{news.text}}</h5>
+			</div>
+			<div class="col-md-5">
+				<div class="panel-heading">
+					<img class= "img" src="{{ news.thread.main_image }}" alt="" height="300" width="300">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
